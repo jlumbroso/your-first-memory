@@ -1,0 +1,17 @@
+# One-click deploy: https://render.com → New → Blueprint → this repo.
+# Free tier note (inherited from your-first-instrument ADR-0003): the
+# instance sleeps when idle; the first call after a nap takes ~30s.
+services:
+  - type: web
+    name: your-first-memory
+    runtime: python
+    plan: free
+    # PINNED — mcp 2.x renamed FastMCP (caught in class 2026-09-10, and again
+    # on Render 2026-09-17: buildCommand bypasses pyproject.toml, so the pin
+    # must live in BOTH places). psycopg[binary] ships its own libpq.
+    buildCommand: pip install "mcp[cli]>=1.2,<2" "psycopg[binary]>=3.1"
+    startCommand: python server.py
+    envVars:
+      - key: DATABASE_URL
+        sync: false   # Render will ASK you for this at deploy time (ADR-0003):
+                      # paste your Neon connection string; it never touches git.
