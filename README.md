@@ -8,7 +8,9 @@ survives the end of the conversation.
 One table. Two tools (`record_quote`, `list_quotes`). A database that
 outlives the server, the deploy, and the chat window.
 
-- **In class**: follow [COURSE-STEPS.md](COURSE-STEPS.md).
+- **In class**: follow [COURSE-STEPS.md](COURSE-STEPS.md). This is **level 2**
+  of the instrument series (level 1: [`your-first-instrument`](https://github.com/jlumbroso/test-time-mcp-exercise);
+  level 3, `your-protected-notes`, unlocks in a future session).
 - **Every design choice, with the road not taken**: [docs/adr/](docs/adr/) —
   four real decisions, none decorative. When you change the code and face
   a choice of your own, add ADR-0005.

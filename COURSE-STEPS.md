@@ -42,3 +42,10 @@ the columns, the tools — the model adapts to your tool names instantly.
 When you make a real design choice (add delete? soft or hard? — see
 ADR-0004), write your own ADR-0005 in docs/adr/. That's not homework
 theater: it's the difference between code you have and decisions you own.
+
+## Next level
+
+**Level 3 — `your-protected-notes`**: right now, anyone who finds your
+server's URL can read your memory. The next level teaches it *who is
+asking* — guest commons, private shelves, one `user_id` column. It unlocks
+in a future session; everything you built here carries forward unchanged.
